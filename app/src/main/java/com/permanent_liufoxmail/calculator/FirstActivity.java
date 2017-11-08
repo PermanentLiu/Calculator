@@ -146,10 +146,10 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             lastNumber = Float.parseFloat(text);
             lastNumber_t = 1;
         }
-//        if (textView1.getText().toString().equals("521"))
-//        {
-//            textView1.setText(">^_^<");
-//        }
+        if (textView1.getText().toString().equals("521"))
+        {
+            textView1.setText(">^_^<");
+        }
         if (textView1.getText().toString().equals("1.22"))
         {
             textView3.setText("陈薪羽");
