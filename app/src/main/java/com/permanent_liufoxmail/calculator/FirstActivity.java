@@ -150,24 +150,30 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         {
             textView1.setText(">^_^<");
         }
-        if (textView1.getText().toString().equals("1.22"))
+//        if (textView1.getText().toString().equals("1.22"))
+//        {
+//            textView3.setText("陈薪羽");
+//            textView2.setText("是个智障");
+//            textView1.setText("=^_^=");
+//        }
+        if (textView1.getText().toString().equals("1.7"))
         {
-            textView3.setText("陈薪羽");
-            textView2.setText("是个智障");
-            textView1.setText("=^_^=");
+            textView3.setText("接下来有请");
+            textView2.setText("魏芳同志");
+            textView1.setText("给我发红包");
         }
-//        if (textView1.getText().toString().equals("1.7"))
-//        {
-//            textView3.setText("接下来有请");
-//            textView2.setText("魏芳同志");
-//            textView1.setText("给我发红包");
-//        }
-//        if (textView1.getText().toString().equals("10.11"))
-//        {
-//            textView3.setText("接下来有请");
-//            textView2.setText("刘永蘅同志");
-//            textView1.setText("向二位表示感谢");
-//        }
+        if (textView1.getText().toString().equals("10.15"))
+        {
+            textView3.setText("接下来有请");
+            textView2.setText("刘汉钧同志");
+            textView1.setText("给我发红包");
+        }
+        if (textView1.getText().toString().equals("10.11"))
+        {
+            textView3.setText("接下来有请");
+            textView2.setText("刘永蘅同志");
+            textView1.setText("向二位表示感谢");
+        }
 
     }
 
