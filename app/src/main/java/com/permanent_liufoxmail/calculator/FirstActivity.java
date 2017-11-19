@@ -31,16 +31,16 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
 {
     public static int theme = R.layout.activity_third_daytheme;
 
-    private TextView textView10;
-    private TextView textView9;
-    private TextView textView8;
-    private TextView textView7;
-    private TextView textView6;
-    private TextView textView5;
-    private TextView textView4;
-    private TextView textView3;
-    private TextView textView2;
-    private TextView textView1;
+    private static TextView textView10;
+    private static TextView textView9;
+    private static TextView textView8;
+    private static TextView textView7;
+    private static TextView textView6;
+    private static TextView textView5;
+    private static TextView textView4;
+    private static TextView textView3;
+    private static TextView textView2;
+    private static TextView textView1;
     private Button button0;
     private Button button1;
     private Button button2;
@@ -179,6 +179,8 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
 
     private void showDialog()
     {
+
+
         AlertDialog.Builder builder = new AlertDialog.Builder(FirstActivity.this);
         builder.setMessage("输入俩运算符啥意思\n我看你就是在刁难我");
         builder.setTitle("彪啊");
@@ -187,28 +189,25 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             @Override
             public void onClick(DialogInterface dialogInterface, int i)
             {
-                System.exit(0);
+                flag = 0;
+                scrollToButtom();
+                roll();
+                FirstActivity.textView1.setText("0");
+                FirstActivity.textView2.setText(null);
+                FirstActivity.textView3.setText(null);
+                FirstActivity.textView4.setText(null);
+                FirstActivity.textView5.setText(null);
+                FirstActivity.textView6.setText(null);
+                FirstActivity.textView7.setText(null);
+                FirstActivity.textView8.setText(null);
+                FirstActivity.textView9.setText(null);
+                FirstActivity.textView10.setText(null);
+                lastNumber_t = 0;
             }
         });
         AlertDialog alterDialog = builder.create();
         alterDialog.setCanceledOnTouchOutside(false);
         alterDialog.show();
-
-        flag = 0;
-        scrollToButtom();
-        roll();
-        this.textView1.setText("0");
-        this.textView2.setText(null);
-        this.textView3.setText(null);
-        this.textView4.setText(null);
-        this.textView5.setText(null);
-        this.textView6.setText(null);
-        this.textView7.setText(null);
-        this.textView8.setText(null);
-        this.textView9.setText(null);
-        this.textView10.setText(null);
-        lastNumber_t = 0;
-
     }
 
     private void roll()
