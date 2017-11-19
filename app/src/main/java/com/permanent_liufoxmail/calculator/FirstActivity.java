@@ -194,6 +194,21 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         alterDialog.setCanceledOnTouchOutside(false);
         alterDialog.show();
 
+        flag = 0;
+        scrollToButtom();
+        roll();
+        this.textView1.setText("0");
+        this.textView2.setText(null);
+        this.textView3.setText(null);
+        this.textView4.setText(null);
+        this.textView5.setText(null);
+        this.textView6.setText(null);
+        this.textView7.setText(null);
+        this.textView8.setText(null);
+        this.textView9.setText(null);
+        this.textView10.setText(null);
+        lastNumber_t = 0;
+
     }
 
     private void roll()
