@@ -29,7 +29,7 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 public class FirstActivity extends AppCompatActivity implements OnClickListener
 {
-    public static int theme = R.layout.activity_third_daytheme;
+    public static int theme = R.style.AppTheme;
 
     private static TextView textView10;
     private static TextView textView9;
@@ -167,7 +167,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
         AlertDialog.Builder builder = new AlertDialog.Builder(FirstActivity.this);
         builder.setMessage("输入俩运算符啥意思\n我看你就是在刁难我");
         builder.setTitle("彪啊");
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener()
+        builder.setPositiveButton("爸爸 我错了", new DialogInterface.OnClickListener()
         {
             @Override
             public void onClick(DialogInterface dialogInterface, int i)
@@ -216,7 +216,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.AppTheme);
+        setTheme(theme);
         setContentView(R.layout.activity_first);
 
         textView10 = (TextView) findViewById(R.id.textView10);
@@ -305,10 +305,12 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
             case R.id.action_aboutme:
                 Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
                 startActivity(intent);
+                FirstActivity.this.finish();
                 return true;
             case R.id.action_setting:
                 Intent intent1 = new Intent(FirstActivity.this, ThirdActivity.class);
                 startActivity(intent1);
+                FirstActivity.this.finish();
                 return true;
         }
 

@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.FitWindowsFrameLayout;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
@@ -36,6 +38,16 @@ public class SecondActivity extends AppCompatActivity implements OnClickListener
         web.setOnClickListener(this);
 
         initText();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        Intent intent = new Intent();
+        intent.setClass(SecondActivity.this, FirstActivity.class);
+        startActivity(intent);
+        SecondActivity.this.finish();
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override

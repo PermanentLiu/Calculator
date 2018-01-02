@@ -1,9 +1,11 @@
 package com.permanent_liufoxmail.calculator;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,40 +20,33 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-
-//        if (theme == R.style.nightTheme)
-//        {
-//            setTheme(R.style.nightTheme);
-//        }
-//        else
-//        {
-//            setTheme(R.style.dayTheme);
-//        }
-//        Log.d("theme", String.valueOf(theme));
-//        Log.d("theme", String.valueOf(R.style.nightTheme));
-//        Log.d("theme", String.valueOf(R.style.dayTheme));
-
         super.onCreate(savedInstanceState);
-//        if (theme == R.style.nightTheme)
-//        {
-//            setContentView(R.layout.activity_third_nighttheme);
-//        }
-//        else
-//        {
-//            setContentView(R.layout.activity_third_daytheme);
-//        }
         setTheme(FirstActivity.theme);
         setContentView(R.layout.activity_third);
 
-
         Log.d("theme = daytheme", String.valueOf(FirstActivity.theme == R.style.AppTheme));
         Log.d("theme = nighttheme", String.valueOf(FirstActivity.theme == R.style.nightTheme));
+//        Log.d("theme", String.valueOf(FirstActivity.theme));
+//        Log.d("theme", String.valueOf(R.style.nightTheme));
+//        Log.d("theme", String.valueOf(R.style.dayTheme));
+
+
 
 
         shiftDayNight = (Button) findViewById(R.id.shiftDayNight);
 
         shiftDayNight.setOnClickListener(this);
 
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        Intent intent = new Intent();
+        intent.setClass(ThirdActivity.this, FirstActivity.class);
+        startActivity(intent);
+        ThirdActivity.this.finish();
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override

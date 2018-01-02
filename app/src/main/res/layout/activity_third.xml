@@ -8,9 +8,11 @@
     tools:context = "com.permanent_liufoxmail.calculator.ThirdActivity">
 
     <Button
-        android:id="@+id/shiftDayNight"
-        android:text="day/night"
+        android:id = "@+id/shiftDayNight"
         android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"/>
+        android:layout_height = "wrap_content"
+        android:layout_marginBottom = "475dp"
+        android:text = "日/夜间模式"
+        app:layout_constraintBottom_toBottomOf = "parent"/>
 
 </android.support.constraint.ConstraintLayout>
