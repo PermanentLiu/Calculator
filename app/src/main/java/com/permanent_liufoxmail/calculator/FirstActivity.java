@@ -166,7 +166,7 @@ public class FirstActivity extends AppCompatActivity implements OnClickListener
 
         AlertDialog.Builder builder = new AlertDialog.Builder(FirstActivity.this);
         builder.setMessage("输入俩运算符啥意思\n我看你就是在刁难我");
-        builder.setTitle("彪啊");
+        builder.setTitle("484傻");
         builder.setPositiveButton("爸爸 我错了", new DialogInterface.OnClickListener()
         {
             @Override

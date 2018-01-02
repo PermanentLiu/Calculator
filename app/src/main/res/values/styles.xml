@@ -14,13 +14,6 @@
     </style>
 
 
-    <!--Light-->
-    <style name = "dayTheme"
-           parent = "AppTheme">
-
-        <item name="android:textColor">#525252</item>
-        <item name="android:background">#f7f7f7</item>
-    </style>
 
     <!--Dark-->
     <style name = "nightTheme"
@@ -28,6 +21,8 @@
 
         <item name = "android:textColor">#868a96</item>
         <item name = "android:background">#1e1e2a</item>
+
+
     </style>
 
 </resources>
