@@ -29,7 +29,6 @@
                 android:lines = "1"
                 android:maxEms = "8"
                 android:singleLine = "true"
-
                 android:textSize = "50sp"
                 android:visibility = "visible"/>
 
