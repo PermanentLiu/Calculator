@@ -27,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_SHORT;
+import static com.permanent_liufoxmail.calculator.R.styleable.AlertDialog;
 
 
 public class FirstActivity extends AppCompatActivity implements OnClickListener
